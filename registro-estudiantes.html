@@ -7,8 +7,8 @@
 </head>
 <body>
     <form id="student-form">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required><br><br>
+        <label for="namee">Nombre:</label>
+        <input type="text" id="namee" name="namee" required><br><br>
         
         <label for="student-id">Número de Cuenta:</label>
         <input type="text" id="student-id" name="student-id" required><br><br>
@@ -25,12 +25,12 @@
 
         form.addEventListener('submit', function(event) {
             event.preventDefault();
-            const name = document.getElementById('name').value;
+            const namee = document.getElementById('namee').value;
             const studentId = document.getElementById('student-id').value;
             const password = document.getElementById('password').value;
 
             const student = {
-                name: name,
+                namee: namee,
                 studentId: studentId,
                 password: password
             };
