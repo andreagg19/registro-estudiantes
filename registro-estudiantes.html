@@ -1,45 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Estudiantes</title>
 </head>
 <body>
-    <form id="student-form">
-        <label for="namee">Nombre:</label>
-        <input type="text" id="namee" name="namee" required><br><br>
+    <form id="formulario-estudiante">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
         
-        <label for="student-id">Número de Cuenta:</label>
-        <input type="text" id="student-id" name="student-id" required><br><br>
+        <label for="numero-cuenta">Número de Cuenta:</label>
+        <input type="text" id="numero-cuenta" name="numero-cuenta" required><br><br>
         
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required><br><br>
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required><br><br>
         
         <button type="submit">Registrar</button>
     </form>
     
     <script>
-        const form = document.getElementById('student-form');
-        const students = [];
+        const formulario = document.getElementById('formulario-estudiante');
+        const estudiantes = [];
 
-        form.addEventListener('submit', function(event) {
+        formulario.addEventListener('submit', function(event) {
             event.preventDefault();
-            const namee = document.getElementById('namee').value;
-            const studentId = document.getElementById('student-id').value;
-            const password = document.getElementById('password').value;
+            const nombre = document.getElementById('nombre').value;
+            const numeroCuenta = document.getElementById('numero-cuenta').value;
+            const contrasena = document.getElementById('contrasena').value;
 
-            const student = {
-                namee: namee,
-                studentId: studentId,
-                password: password
+            const estudiante = {
+                nombre: nombre,
+                numeroCuenta: numeroCuenta,
+                contrasena: contrasena
             };
 
-            students.push(student);
-            console.log('Estudiante registrado:', student);
-            console.log('Todos los estudiantes:', students);
+            estudiantes.push(estudiante);
+            console.log('Estudiante registrado:', estudiante);
+            console.log('Todos los estudiantes:', estudiantes);
 
         });
     </script>
 </body>
 </html>
+
